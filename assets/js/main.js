@@ -14,4 +14,28 @@ const botao13 = document.querySelector('.botao13');
 const botao14 = document.querySelector('.botao14');
 const botao15 = document.querySelector('.botao15');
 const botao16 = document.querySelector('.botao16');
+const resultado = document.querySelector('.resultado');
 
+
+function insert(num) {
+    let numero = resultado.innerHTML;
+    resultado.innerHTML = numero + num;
+}
+
+function clear() {
+    resultado.innerHTML = " "
+}
+
+botao1.addEventListener('click', function(e) {
+    clear()
+})
+
+function calcular() {
+    if (resultado) {
+        resultado.innerHTML = eval(resultado)
+    }
+}
+
+botao16.addEventListener('click', function(e) {
+    calcular()
+})
